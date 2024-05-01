@@ -1,0 +1,45 @@
+
+//padding
+$base-border: 1px solid black;
+$base-border-top:2px solid red;
+$base-border-radius:20px;
+//border
+$base-height:500px;
+$base-width:100%;
+$base-text-align: center;
+$base-display: flex;
+$base-justify-content:flex-end;
+$base-align-items: center;
+$base-ul-li-display:none;
+$base-float:left;
+$base-float:right;
+$w-30-width:30%;
+$w-23-width:90%;
+$w-100-width:100%;
+$f-font-size:2em;
+$t-text-align:center;
+$h-30-height:300px;
+$p-padding:5px 5px 3px 6px 7px;
+$m-margin-top:20px;
+$p-padding-top:20px 20px 10px 0px;
+$f-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+
+
+$colors:(
+
+ "Yello": 	#FFFF00,
+ "Fuchsia": #FF00FF,	
+ "Silver": 	#C0C0C0,	
+ "Gray": 	#808080,	
+ "Maroon": 	#800000,	
+ "red":     #ff0000,
+ "Olive": 	#808000,
+ "Green": 	#008000,	
+ "Purple": 	#800080,	
+ "Teal": 	#008080,	
+ "Navy": 	#000080,	
+ "Blue": 	#0000FF,	
+"Black": #000000,
+"White": #FFFFFF,
+"xanh" :#0000FF,
+);

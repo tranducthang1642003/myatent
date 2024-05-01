@@ -1,0 +1,135 @@
+
+body{
+    margin: 0 auto;
+    font-family: $f-font-family;
+}
+
+.Headline{
+height: 770px;
+display: $base-display;
+flex-wrap: wrap;
+align-content: space-around;
+justify-content: center;
+flex-direction: column;
+background-image: linear-gradient(#fcfcfc, #c8eefa);
+}
+.sigin-col-1{
+min-height: $h-30-height;
+width: 450px;
+background-color: rgb(255, 255, 255);
+box-shadow: 3px 3px 3px 3px rgb(221, 221, 210);
+border-radius: $base-border-radius;
+display: $base-display;
+flex-direction: column;
+align-content: center;
+flex-wrap: wrap;
+position:relative;
+}
+
+.h{
+    text-align: $t-text-align;
+}
+
+.f{
+    font-size: $f-font-size;
+}
+.d{
+    display: $base-display;
+    justify-content: space-around;
+}
+
+input::placeholder {
+    font-weight: bold;
+    opacity: 0.5;
+    padding: 10px;
+    font-size: 15px;
+  }
+
+.da{
+    border-top: 1px solid rgb(160, 160, 160);
+    width:$w-23-width;
+    padding: 5px 0px 10px 0px;
+}
+
+form{
+    width: 100%;
+}
+.txt{
+ width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(148, 147, 147);
+
+}
+.name-sig{
+    width: 30%;
+}
+
+
+.name-check{
+    width: 90%;
+}
+label{
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 2.5;
+}
+
+.tap-input-1{
+        display: flex;
+        flex-direction: row-reverse;
+}
+
+
+.txt1{
+    width: 70%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid rgb(148, 147, 147);
+}
+.txt_code{
+    height: 40px;
+    float: right;
+    width: 25%;
+    border-radius: 5px;
+    border: 1px solid rgb(148, 147, 147);
+}
+
+ 
+.tab{
+    overflow: hidden;
+    border: 1px solid #ffffff;
+    padding: 20px 0px 15px 0px;
+  }
+  
+  /* Style the buttons inside the tab */
+  .tab button {
+    padding: 9px 21px 9px 18px;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    background: white;
+   
+  }
+
+  .tab button:hover {
+   color: blue;
+   border-bottom: 2px solid blue;
+
+  }
+  .tab button.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+  }
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
+.from-col-submit{
+    display: flex;
+   padding: 30px 5px 5px 0px;
+    justify-content: center;
+}

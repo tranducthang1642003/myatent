@@ -1,0 +1,605 @@
+body {
+  margin: 0 auto;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.Headline {
+  height: 770px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+  flex-direction: column;
+  background-image: linear-gradient(#fcfcfc, #c8eefa);
+}
+
+.sigin-col-1 {
+  min-height: 300px;
+  width: 450px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 3px 3px 3px 3px rgb(221, 221, 210);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.h {
+  text-align: center;
+}
+
+.f {
+  font-size: 2em;
+}
+
+.d {
+  display: flex;
+  justify-content: space-around;
+}
+
+input::-moz-placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  padding: 10px;
+  font-size: 15px;
+}
+
+input::placeholder {
+  font-weight: bold;
+  opacity: 0.5;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.da {
+  border-top: 1px solid rgb(160, 160, 160);
+  width: 90%;
+  padding: 5px 0px 10px 0px;
+}
+
+form {
+  width: 100%;
+}
+
+.txt {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(148, 147, 147);
+}
+
+.name-sig {
+  width: 30%;
+}
+
+.name-check {
+  width: 90%;
+}
+
+label {
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 2.5;
+}
+
+.tap-input-1 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.txt1 {
+  width: 70%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(148, 147, 147);
+}
+
+.txt_code {
+  height: 40px;
+  float: right;
+  width: 25%;
+  border-radius: 5px;
+  border: 1px solid rgb(148, 147, 147);
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  padding: 20px 0px 15px 0px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  padding: 9px 21px 9px 18px;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 15px;
+  background: white;
+}
+
+.tab button:hover {
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.tab button.active {
+  color: blue;
+  border-bottom: 3px solid blue;
+}
+
+.tabcontent {
+  display: none;
+  border-top: none;
+}
+
+.from-col-submit {
+  display: flex;
+  padding: 30px 5px 5px 0px;
+  justify-content: center;
+}
+
+.text-Yello {
+  color: #FFFF00;
+}
+
+.text-Yello-light-1 {
+  color: #f7f700;
+}
+
+.text-hover-Yello-light-1:hover {
+  color: #f7f700;
+  border-top: 2px solid blue;
+}
+
+.bg-Yello-light-1 {
+  color: #f7f700;
+}
+
+.text-Yello-light-2 {
+  color: #f0f000;
+}
+
+.text-hover-Yello-light-2:hover {
+  color: #f0f000;
+  border-top: 2px solid blue;
+}
+
+.bg-Yello-light-2 {
+  color: #f0f000;
+}
+
+.text-Fuchsia {
+  color: #FF00FF;
+}
+
+.text-Fuchsia-light-1 {
+  color: #f700f7;
+}
+
+.text-hover-Fuchsia-light-1:hover {
+  color: #f700f7;
+  border-top: 2px solid blue;
+}
+
+.bg-Fuchsia-light-1 {
+  color: #f700f7;
+}
+
+.text-Fuchsia-light-2 {
+  color: #f000f0;
+}
+
+.text-hover-Fuchsia-light-2:hover {
+  color: #f000f0;
+  border-top: 2px solid blue;
+}
+
+.bg-Fuchsia-light-2 {
+  color: #f000f0;
+}
+
+.text-Silver {
+  color: #C0C0C0;
+}
+
+.text-Silver-light-1 {
+  color: #bababa;
+}
+
+.text-hover-Silver-light-1:hover {
+  color: #bababa;
+  border-top: 2px solid blue;
+}
+
+.bg-Silver-light-1 {
+  color: #bababa;
+}
+
+.text-Silver-light-2 {
+  color: #b4b4b4;
+}
+
+.text-hover-Silver-light-2:hover {
+  color: #b4b4b4;
+  border-top: 2px solid blue;
+}
+
+.bg-Silver-light-2 {
+  color: #b4b4b4;
+}
+
+.text-Gray {
+  color: #808080;
+}
+
+.text-Gray-light-1 {
+  color: #7c7c7c;
+}
+
+.text-hover-Gray-light-1:hover {
+  color: #7c7c7c;
+  border-top: 2px solid blue;
+}
+
+.bg-Gray-light-1 {
+  color: #7c7c7c;
+}
+
+.text-Gray-light-2 {
+  color: #787878;
+}
+
+.text-hover-Gray-light-2:hover {
+  color: #787878;
+  border-top: 2px solid blue;
+}
+
+.bg-Gray-light-2 {
+  color: #787878;
+}
+
+.text-Maroon {
+  color: #800000;
+}
+
+.text-Maroon-light-1 {
+  color: #7c0000;
+}
+
+.text-hover-Maroon-light-1:hover {
+  color: #7c0000;
+  border-top: 2px solid blue;
+}
+
+.bg-Maroon-light-1 {
+  color: #7c0000;
+}
+
+.text-Maroon-light-2 {
+  color: #780000;
+}
+
+.text-hover-Maroon-light-2:hover {
+  color: #780000;
+  border-top: 2px solid blue;
+}
+
+.bg-Maroon-light-2 {
+  color: #780000;
+}
+
+.text-red {
+  color: #ff0000;
+}
+
+.text-red-light-1 {
+  color: #f70000;
+}
+
+.text-hover-red-light-1:hover {
+  color: #f70000;
+  border-top: 2px solid blue;
+}
+
+.bg-red-light-1 {
+  color: #f70000;
+}
+
+.text-red-light-2 {
+  color: #f00000;
+}
+
+.text-hover-red-light-2:hover {
+  color: #f00000;
+  border-top: 2px solid blue;
+}
+
+.bg-red-light-2 {
+  color: #f00000;
+}
+
+.text-Olive {
+  color: #808000;
+}
+
+.text-Olive-light-1 {
+  color: #7c7c00;
+}
+
+.text-hover-Olive-light-1:hover {
+  color: #7c7c00;
+  border-top: 2px solid blue;
+}
+
+.bg-Olive-light-1 {
+  color: #7c7c00;
+}
+
+.text-Olive-light-2 {
+  color: #787800;
+}
+
+.text-hover-Olive-light-2:hover {
+  color: #787800;
+  border-top: 2px solid blue;
+}
+
+.bg-Olive-light-2 {
+  color: #787800;
+}
+
+.text-Green {
+  color: #008000;
+}
+
+.text-Green-light-1 {
+  color: #007c00;
+}
+
+.text-hover-Green-light-1:hover {
+  color: #007c00;
+  border-top: 2px solid blue;
+}
+
+.bg-Green-light-1 {
+  color: #007c00;
+}
+
+.text-Green-light-2 {
+  color: #007800;
+}
+
+.text-hover-Green-light-2:hover {
+  color: #007800;
+  border-top: 2px solid blue;
+}
+
+.bg-Green-light-2 {
+  color: #007800;
+}
+
+.text-Purple {
+  color: #800080;
+}
+
+.text-Purple-light-1 {
+  color: #7c007c;
+}
+
+.text-hover-Purple-light-1:hover {
+  color: #7c007c;
+  border-top: 2px solid blue;
+}
+
+.bg-Purple-light-1 {
+  color: #7c007c;
+}
+
+.text-Purple-light-2 {
+  color: #780078;
+}
+
+.text-hover-Purple-light-2:hover {
+  color: #780078;
+  border-top: 2px solid blue;
+}
+
+.bg-Purple-light-2 {
+  color: #780078;
+}
+
+.text-Teal {
+  color: #008080;
+}
+
+.text-Teal-light-1 {
+  color: #007c7c;
+}
+
+.text-hover-Teal-light-1:hover {
+  color: #007c7c;
+  border-top: 2px solid blue;
+}
+
+.bg-Teal-light-1 {
+  color: #007c7c;
+}
+
+.text-Teal-light-2 {
+  color: #007878;
+}
+
+.text-hover-Teal-light-2:hover {
+  color: #007878;
+  border-top: 2px solid blue;
+}
+
+.bg-Teal-light-2 {
+  color: #007878;
+}
+
+.text-Navy {
+  color: #000080;
+}
+
+.text-Navy-light-1 {
+  color: #00007c;
+}
+
+.text-hover-Navy-light-1:hover {
+  color: #00007c;
+  border-top: 2px solid blue;
+}
+
+.bg-Navy-light-1 {
+  color: #00007c;
+}
+
+.text-Navy-light-2 {
+  color: #000078;
+}
+
+.text-hover-Navy-light-2:hover {
+  color: #000078;
+  border-top: 2px solid blue;
+}
+
+.bg-Navy-light-2 {
+  color: #000078;
+}
+
+.text-Blue {
+  color: #0000FF;
+}
+
+.text-Blue-light-1 {
+  color: #0000f7;
+}
+
+.text-hover-Blue-light-1:hover {
+  color: #0000f7;
+  border-top: 2px solid blue;
+}
+
+.bg-Blue-light-1 {
+  color: #0000f7;
+}
+
+.text-Blue-light-2 {
+  color: #0000f0;
+}
+
+.text-hover-Blue-light-2:hover {
+  color: #0000f0;
+  border-top: 2px solid blue;
+}
+
+.bg-Blue-light-2 {
+  color: #0000f0;
+}
+
+.text-Black {
+  color: #000000;
+}
+
+.text-Black-light-1 {
+  color: black;
+}
+
+.text-hover-Black-light-1:hover {
+  color: black;
+  border-top: 2px solid blue;
+}
+
+.bg-Black-light-1 {
+  color: black;
+}
+
+.text-Black-light-2 {
+  color: black;
+}
+
+.text-hover-Black-light-2:hover {
+  color: black;
+  border-top: 2px solid blue;
+}
+
+.bg-Black-light-2 {
+  color: black;
+}
+
+.text-White {
+  color: #FFFFFF;
+}
+
+.text-White-light-1 {
+  color: #f7f7f7;
+}
+
+.text-hover-White-light-1:hover {
+  color: #f7f7f7;
+  border-top: 2px solid blue;
+}
+
+.bg-White-light-1 {
+  color: #f7f7f7;
+}
+
+.text-White-light-2 {
+  color: #f0f0f0;
+}
+
+.text-hover-White-light-2:hover {
+  color: #f0f0f0;
+  border-top: 2px solid blue;
+}
+
+.bg-White-light-2 {
+  color: #f0f0f0;
+}
+
+.text-xanh {
+  color: #0000FF;
+}
+
+.text-xanh-light-1 {
+  color: #0000f7;
+}
+
+.text-hover-xanh-light-1:hover {
+  color: #0000f7;
+  border-top: 2px solid blue;
+}
+
+.bg-xanh-light-1 {
+  color: #0000f7;
+}
+
+.text-xanh-light-2 {
+  color: #0000f0;
+}
+
+.text-hover-xanh-light-2:hover {
+  color: #0000f0;
+  border-top: 2px solid blue;
+}
+
+.bg-xanh-light-2 {
+  color: #0000f0;
+}
+
+.btn {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  border-radius: 20px;
+  width: 25%;
+  height: 40px;
+  background-color: rgb(88, 88, 255);
+}

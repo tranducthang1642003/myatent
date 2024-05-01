@@ -1,0 +1,132 @@
+@mixin btn1(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    display: inline-block;
+    border-radius: $base-border-radius;
+width: 12%;
+height: 40px;
+background-color: rgb(88, 88, 255);
+}
+
+@mixin btn2(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    display: inline-block;
+    border-radius: 3px;
+width: 31%;
+height: 35px;
+background-color: rgb(88, 88, 255);
+border: solid 1px rgb(0, 4, 249);
+}
+
+
+@mixin btn5(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    display: inline-block;
+    border-radius: 3px;
+width: 31%;
+height: 35px;
+border: solid 1px rgb(0, 4, 249);
+color: blue;
+font-size: 15px;
+background-color: rgb(255, 255, 255);
+}
+
+
+@mixin btn4(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    display: inline-block;
+    border-radius: 3px;
+width: 25%;
+height: 30px;
+background-color: rgb(9, 235, 103);
+}
+
+
+@mixin btn3(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+ border: 1px dashed blue;
+    display: inline-block;
+    border-radius: 3px;
+width: 30%;
+height: 40px;
+ color: blue;
+ background-color: rgb(255, 255, 255);
+ font-size: 12px;
+}
+
+
+@mixin btnxoa(){
+    text-decoration:none;
+    cursor: pointer;
+    display: inline-block;
+ border: 1px solid rgb(255, 0, 0);
+    display: inline-block;
+    border-radius: 3px;
+width: 81%;
+height: 32px;
+ color: rgb(255, 0, 0);
+ background-color: rgb(255, 255, 255);
+ font-size: 12px;
+}
+
+
+@mixin btnthem(){
+    text-decoration:none;
+    cursor: pointer;
+  
+ border: 1px solid rgb(93, 0, 255);
+    border-radius: 3px;
+width: 88%;
+height: 32px;
+ color: rgb(255, 255, 255);
+ background-color: rgb(52, 9, 224);
+ font-size: 12px;
+}
+
+@mixin btnk(){
+    border: none;
+    background: none;
+    font-size: 20px;
+    text-decoration:none;
+    cursor: pointer;
+  
+}
+
+.btn1{
+    @include btn1;
+}
+.btn2{
+    @include btn2;
+}
+.btn3{
+    @include btn3;
+}
+.btn4{
+    @include btn4;
+}
+.btn5{
+    @include btn5;
+}
+.btnxoa{
+    @include btnxoa;
+}
+
+.btnthem{
+    @include btnthem;
+}
+.btnk{
+    @include btnk;
+}

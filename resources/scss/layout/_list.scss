@@ -1,0 +1,422 @@
+body{
+    margin: 0 auto;
+    font-family: $f-font-family;
+}
+
+.filter-form1{
+
+  width: 100%;
+  background-color: #000000;
+  height: 1392px;
+  position: absolute;
+  margin-top: -26%;
+
+}
+
+.khung-1{
+  width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+
+}
+
+
+.loc{
+width: 70%;
+  margin: auto;
+  background-color: #ffffff;
+  height: 800px;
+  margin-top: 50px;
+}
+.filter-form1 {
+  display: none;
+ 
+}
+
+#filter-button:active + .filter-form1 {
+  display: block;
+}
+
+.filter-col-2{
+  width: 50%;
+
+height: 520px;
+margin: auto;
+}
+
+.filter-1{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #2196F3;
+  background-color: aqua;
+  padding: 10px 2px;
+  border-radius: 3px;
+}
+
+header{
+  width: 100%;
+  height: 52px;
+  background: rgba(47, 84, 235, 1);
+
+
+}
+.left{
+  width: 91%;
+  float: left;
+}
+
+.right{
+  width: 50%;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.step{
+width: 20%;
+
+}
+
+.tab{
+    overflow: hidden;
+
+  }
+  
+  .menu{
+    height: 52px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-evenly;
+}
+  
+  .tab button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 12px;
+    width: 24%; 
+    border-radius: 3%;
+    height: 33px;
+background: none  ;
+    
+    
+  }
+
+  .tab1 button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    width: 10%;
+
+    height: 40px;
+  background:none;
+  }
+
+
+
+  .tab2 button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 15px;
+    width: 15%;
+    height: 40px;
+  background:none;
+  }
+
+
+  
+  .tab2 button:hover {
+    color: rgb(0, 8, 255);
+ 
+   }
+   .tab2 button.active {
+     color: blue;
+     border-bottom: 3px solid blue;
+ }
+
+ .boder{
+  width: 100%;
+  border-bottom: 1px solid #cccccc;
+ }
+
+  .tab1 button:hover {
+   color: rgb(0, 8, 255);
+
+  }
+  .tab1 button.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+  .tabcontent {
+    display: none;
+    border-top: none;
+  }
+
+article{  
+  width: Fixed (1,391px);
+    min-height: auto;
+    margin: auto;
+    border-radius: 10px;
+   
+}
+
+ .col-2{
+  line-height: 1.5;
+
+  background-color: rgba(255, 255, 255, 1);
+   min-height:auto;
+    margin: auto;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgb(233, 233, 233);
+   margin-top: 20px;
+    
+ }
+ .text-1{
+  font-weight: 400;
+  padding: 0px 0px 0px 33px ;
+
+
+ }
+.main-left{
+  float: left;
+  width: 75%;
+  min-height: 100px;
+  background-color: rgb(255, 255, 255);
+ margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(222, 217, 217);
+}
+.main-right{
+  float: right;
+  width: 23%;
+  min-height: 500px;
+  background-color: rgb(255, 255, 255);
+ margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 3px rgb(222, 217, 217);
+}
+
+.from-register{
+  width: 60%;
+min-height: 350px;
+
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+label{
+  font-size: 15px;
+  padding: 5px;
+  font-weight: 900;
+}
+
+.txt{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 210, 210);
+  padding: 5px 10px 0px 10px;
+  margin-top: 1.5%;
+  
+}
+
+
+.txt-img{
+  width: 30%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 210, 210);
+background-color: rgb(212, 212, 212);
+display: grid;
+justify-items: center;
+align-content: center;
+float: left;
+margin-left: 30px;
+
+}
+
+.txt-link{
+  width: 30%;
+  height: 100px;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 210, 210);
+background-color: rgb(212, 212, 212);
+display: grid;
+justify-items: center;
+align-content: center;
+
+margin-left: 30px;
+
+}
+.text-file{
+  float: none;
+  margin-left: 10%;
+  
+}
+
+.txt-text1{
+  width: 50%;
+  height: 110px;
+display: grid;
+
+align-content: center;
+float: right;
+margin-right: 5%;
+}
+.txt-text{
+  font-size: 10px;
+}
+.icons{
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+.txt1{
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(210, 210, 210);
+  padding: 5px 5px 0px 10px;
+  margin-top: 1.5%;
+  margin-left: 10%;
+  
+}
+
+
+footer{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  height: 111px;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.search{
+    padding: 20px 0px 0px 33px;
+    width: 850px;
+    float: left;
+}
+
+.text-col-2{
+  padding: 20px 0px 0px 33px;
+  width: 471px;
+  float: right;
+}
+
+.text-col-1{
+  float: left;
+  width: 65%;
+  height: 64px;
+}
+.text-clo-2{
+  float: right;
+  width: 35%;
+  height: 64px;
+}
+.vitri{
+    padding: 15px;
+}
+form.example input[type=text] {
+  padding: 5px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #ffffff;
+}
+* {
+    box-sizing: border-box;
+  }
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 5px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    padding-top: 15px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px 1px rgb(233, 233, 233);
+    padding: 30px;
+}
+  
+.table1{
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  padding-top: 15px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgb(233, 233, 233);
+}
+thead{
+  background: rgba(240, 245, 255, 1);
+  width:  180.5px;
+  height:  36px;
+  gap: 0px;
+  border: 1px 0px 0px 1px;
+  opacity: 0px;
+  
+}
+tbody{
+  width:  180.5px;
+  height:  36px;
+  gap: 0px;
+  border: 1px 0px 0px 1px;
+  opacity: 0px;
+}
+
+th{
+  width:  180.5px;
+  height:  36px;
+  text-align: justify;
+padding: 10px;
+  
+}
+#cars{
+  height: 35px;
+  width: 115px;
+}
+
+td{
+  width:  180.5px;
+  height:  36px;
+  padding: 10px;
+  
+}
+
+
+.td{
+  background: rgba(255, 255, 255, 1);
+width: 65%;
+border: 1px solid  rgba(82, 196, 26, 1);
+color:  rgba(82, 196, 26, 1);
+text-align: center;
+}
