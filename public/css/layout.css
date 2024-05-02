@@ -80,18 +80,8 @@ header {
 }
 
 .tab button {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  transition: 0.3s;
-  font-size: 12px;
-  width: 24%;
   border-radius: 3%;
-  height: 33px;
   background: none;
-}
-
-.tab button {
   border: none;
   outline: none;
   cursor: pointer;
@@ -365,7 +355,6 @@ footer {
 }
 
 .xoa {
-  position: absolute;
   position: absolute;
   margin-top: 1%;
   margin-left: -1.5%;
@@ -915,7 +904,6 @@ a {
 .btn1 {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 0;
   display: inline-block;
   border-radius: 20px;
@@ -927,7 +915,6 @@ a {
 .btn2 {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 0;
   display: inline-block;
   border-radius: 3px;
@@ -940,7 +927,6 @@ a {
 .btn3 {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 1px dashed blue;
   display: inline-block;
   border-radius: 3px;
@@ -954,7 +940,6 @@ a {
 .btn4 {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 0;
   display: inline-block;
   border-radius: 3px;
@@ -966,7 +951,6 @@ a {
 .btn5 {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 0;
   display: inline-block;
   border-radius: 3px;
@@ -981,7 +965,6 @@ a {
 .btnxoa {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
   border: 1px solid rgb(255, 0, 0);
   display: inline-block;
   border-radius: 3px;
