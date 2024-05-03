@@ -19,5 +19,8 @@
         "psr-4": {
             "Modules\\Auth\\": ""
         }
+    },
+    "require": {
+        "bensampo/laravel-enum": "^4.2"
     }
 }

@@ -20,7 +20,7 @@
 <!-- form sigin -->
 <div id="Đăng nhập" class="tabcontent">
     
-<form method="POST" action="{{ route('login1') }}">
+<form method="POST" action="{{ route('login') }}">
                           @csrf  
     <div class="from-col-email">
     <label>Email</label>
