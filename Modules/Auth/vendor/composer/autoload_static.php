@@ -4,6 +4,7 @@
 
 namespace Composer\Autoload;
 
+<<<<<<< HEAD
 class ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426
 {
     public static $files = array (
@@ -40,10 +41,16 @@ class ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426
             'Psr\\Clock\\' => 10,
             'PhpParser\\' => 10,
         ),
+=======
+class ComposerStaticInitbf9e458076b269a748ae89857cdab23a
+{
+    public static $prefixLengthsPsr4 = array (
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
         'M' => 
         array (
             'Modules\\Auth\\' => 13,
         ),
+<<<<<<< HEAD
         'L' => 
         array (
             'Laminas\\ZendFrameworkBridge\\' => 28,
@@ -115,10 +122,16 @@ class ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+=======
+    );
+
+    public static $prefixDirsPsr4 = array (
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
         'Modules\\Auth\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
         ),
+<<<<<<< HEAD
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
             0 => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src',
@@ -166,14 +179,26 @@ class ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+=======
+    );
+
+    public static $classMap = array (
+        'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+<<<<<<< HEAD
             $loader->prefixLengthsPsr4 = ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInita4288d68dbd19429e0075bcdc6e4a426::$classMap;
+=======
+            $loader->prefixLengthsPsr4 = ComposerStaticInitbf9e458076b269a748ae89857cdab23a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitbf9e458076b269a748ae89857cdab23a::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitbf9e458076b269a748ae89857cdab23a::$classMap;
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
 
         }, null, ClassLoader::class);
     }

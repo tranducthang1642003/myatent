@@ -3,13 +3,18 @@
         'name' => 'nwidart/auth',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
+<<<<<<< HEAD
         'reference' => 'f3080cefba20f1516a008081401be9121636428e',
+=======
+        'reference' => '65002e6bc0fe4f63a71e408f7620982358020c2b',
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
+<<<<<<< HEAD
         'bensampo/laravel-enum' => array(
             'pretty_version' => 'v4.2.0',
             'version' => '4.2.0.0',
@@ -131,11 +136,18 @@
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
             'reference' => 'f3080cefba20f1516a008081401be9121636428e',
+=======
+        'nwidart/auth' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '65002e6bc0fe4f63a71e408f7620982358020c2b',
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+<<<<<<< HEAD
         'psr/clock' => array(
             'pretty_version' => '1.0.0',
             'version' => '1.0.0.0',
@@ -244,5 +256,7 @@
                 0 => '^3.4.1',
             ),
         ),
+=======
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
     ),
 );

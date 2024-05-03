@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "packages": [
         {
             "name": "bensampo/laravel-enum",
@@ -1624,6 +1625,9 @@
             "install-path": "../voku/portable-ascii"
         }
     ],
+=======
+    "packages": [],
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
     "dev": true,
     "dev-package-names": []
 }

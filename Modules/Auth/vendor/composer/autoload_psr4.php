@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+<<<<<<< HEAD
     'voku\\' => array($vendorDir . '/voku/portable-ascii/src/voku'),
     'hanneskod\\classtools\\' => array($vendorDir . '/hanneskod/classtools/src'),
     'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
@@ -27,4 +28,7 @@ return array(
     'Carbon\\Doctrine\\' => array($vendorDir . '/carbonphp/carbon-doctrine-types/src/Carbon/Doctrine'),
     'Carbon\\' => array($vendorDir . '/nesbot/carbon/src/Carbon'),
     'BenSampo\\Enum\\' => array($vendorDir . '/bensampo/laravel-enum/src'),
+=======
+    'Modules\\Auth\\' => array($baseDir . '/'),
+>>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe
 );
