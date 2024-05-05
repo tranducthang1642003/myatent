@@ -52,7 +52,7 @@ class CvController extends Controller
             $cv->keywords()->attach($keywordModel->id);
         }
 
-        return redirect()->route('cv::showCv')->with('success', 'CV added successfully');
+        return redirect('cv/showCv')->with('success', 'CV has been deleted successfully.');
     }
 
 

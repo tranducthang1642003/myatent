@@ -63,7 +63,6 @@
 </div>
 </section>
 <div class="boder"></div>
-
 <section>
     <div id="Đăng nhập" class="tabcontent">
             <div class="table">
@@ -82,7 +81,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                        @foreach($job as $job)
+                            @foreach($jobs as $job)
                             <td>{{$job->id}}</td>
                             <td><div class="text-xanh td1" >{{$job->company}}</td>
                             <td><div class="text-xanh td1 ">{{03}}</td>
@@ -91,15 +90,13 @@
                             <td> {{$job->updated_at }}</td>
                             <td>{{$job->updated_at}} <span class="text-Yello-light-2"></span> </div></td>
                             <td>
-                            <button type="submit" id="filter-button" onclick="handleFilterClick({{ $job->id }})" class="btnk"><img src="/Image/favorite-chart.jpg" alt="" style="width: 20px"></button>
-
-
-
+                                
+                            <button type="submit" id="filter-button" onclick="handleFilterClick({{ $job->id }})" class="btnk"><img src="/Image/favorite-chart.jpg" alt="" style="width: 20px">LỌC</button>
                                 <a href="{{ route('job.edit', $job->id) }}"style="    color: #bf0000;">xz</a>
                                 <form action="{{ route('job.destroy', $job->id) }}" method="POST" style="display: inline;">
                             @csrf
                               @method('DELETE')
-                            <button type="submit" class="btnk" onclick="return confirm('Bạn có chắc chắn muốn xóa Job này?')"><img src="/Image/trash.png" alt="" style="width: 20px"></button>
+                            <button type="submit" class="btnk" onclick="return confirm('Bạn có chắc chắn muốn xóa Job này?')"><img src="/Image/trash.png" alt="" style="width: 20px">XÓA</button>
                         </form>
                     </td>
             </tr>   
@@ -122,15 +119,15 @@
 </div>
 <hr>
 <div class="filter-col-2">
-    <form action="{{ route('job.filter') }}" method="post"> <!-- Changed action to 'job.filter' -->
-        @csrf
+    {{-- <form action="{{ route('job.filter') }}" method="post"> <!-- Changed action to 'job.filter' -->
+        @csrf --}}
         <div class="filter-1">1 lần lọc ứng viên = 3 credit.</div>
     
         <div class="">
             <h3>Vị trí:</h3>
         </div>
         <p>
-            <div class="from-job">
+            {{-- <div class="from-job">
                 <label>Kinh nghiệm <span class="text-red-light-1">*</span></label>
                 <div class="from-txt">
                     <input type="text" name="kinang" class="txt" placeholder="Nhập">
@@ -167,10 +164,22 @@
                                             <input type="text" name="kinang" class="txt" placeholder="Nhập"> <!-- Fixed name to 'kinang' -->
                                         </div>
                                     </div>
-                                </p>
+</p>
     </div>
-    
-    <button type="submit" class="btn btn-primary">Filter</button>
+    <button type="submit" class="btn btn-primary">Filter</button> --}}
+
+    <form action="{{ route('job.filter.post') }}" method="POST">
+        @csrf
+        <input type="hidden" name="job_id" value="{{ $job->id }}">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" placeholder="Location">
+        <label for="skill">Skill:</label>
+        <input type="text" name="skill" id="skill" placeholder="Skill">
+        <label for="wage">Minimum Wage:</label>
+        <input type="number" name="wage" id="wage" placeholder="Minimum Wage">
+        <label for="keyword">Keyword:</label>
+        <input type="text" name="keyword" id="keyword" placeholder="Keyword">
+        <button type="submit">Search</button>
     </form>
     
 </div>

@@ -1,9 +1,9 @@
 <?php
 
 namespace Modules\Job\Http\Controllers;
-
+use Modules\Cv\Entities\Cvs;
 use Modules\Job\Entities\Jobs;
-use Modules\Cv\Entities\Keyword;
+use Modules\Cv\Entities\keywords;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -39,14 +39,14 @@ class JobController extends Controller
             $job->keywords()->attach($keywordModel->id);
         }
     
-        return view('job.list', ['jobs' => Jobs::all()]);
+        return view('job::showJob', ['jobs' => Jobs::all()]);
     }
 
     public function showJob()
     {
         $job = Jobs::all();
 
-        return view('job::showJob', compact('job'));
+        return view('job::showJob', ['jobs' => Jobs::all()]);
     }
 
     public function destroyJob($id)
@@ -81,4 +81,55 @@ class JobController extends Controller
         $job->save();
         return redirect('job/show')->with('success', 'Job has been deleted successfully.');
     }
+
+    public function search()
+
+    {
+        dd($all);
+        $jobs = Jobs::all();
+        return view('job::search', compact('jobs'));
+    }
+    public function showFilterForm($id)
+    {
+        dd($all);
+        $job = Jobs::findOrFail($id);
+        return view('job::filter', compact('job'));
+    }
+
+    public function filter(Request $request)
+    {
+      
+        $jobId = $request->input('job_id');
+        $job = Jobs::findOrFail($jobId);
+    
+        $location = $request->input('location');
+        $skill = $request->input('skill');
+        $wage = $request->input('wage');
+        $keyword = $request->input('keyword');
+    
+        $cvs = Cvs::where('location', 'like', "%{$location}%")
+            ->where('skills', 'like', "%{$skill}%")
+            ->where('desiredsalary', '<=', $wage)
+            ->get();
+    
+        // Lọc CVs theo từ khóa
+        $filteredCvs = $cvs;
+        $filteredKeyword = null;
+    
+        if ($keyword) {
+            $filteredCvs = $cvs->filter(function ($cv) use ($keyword) {
+                return $cv->hasKeyword($keyword);
+            });
+            $filteredKeyword = $keyword;
+        }
+   
+        $jobs = Jobs::all(); // Truyền biến $jobs vào view
+    
+        return view('job::search', compact('job', 'jobs', 'cvs', 'filteredCvs', 'filteredKeyword'));
+       
+    }
+    
+    
+    
+    
 }

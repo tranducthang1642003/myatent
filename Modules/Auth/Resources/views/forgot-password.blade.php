@@ -1,25 +1,32 @@
-<x-base::layouts.guest>
-    <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-    </div>
+<!-- resources/views/auth/forgot-password.blade.php -->
 
-    <!-- Session Status -->
-    <x-base::auth-session-status class="mb-4" :status="session('status')" />
+<x-guest-layout>
+    <x-auth-card>
+        <x-slot name="logo">
+            <!-- Logo here -->
+        </x-slot>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+        <!-- Session Status -->
+        <x-auth-session-status :status="session('status')" />
 
-        <!-- Email Address -->
-        <div>
-            <x-base::input-label for="email" :value="__('Email')" />
-            <x-base::text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-base::input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        <!-- Validation Errors -->
+        <x-auth-validation-errors :errors="$errors" />
 
-        <div class="flex items-center justify-end mt-4">
-            <x-base::primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-base::primary-button>
-        </div>
-    </form>
-</x-base::layouts.guest>
+        <form method="POST" action="{{ route('password.email') }}">
+            @csrf
+
+            <!-- Email Address -->
+            <div>
+                <x-label for="email" :value="__('Email')" />
+
+                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            </div>
+
+            <div class="flex items-center justify-end mt-4">
+                <x-button>
+                    {{ __('Email Password Reset Link') }}
+                </x-button>
+            </div>
+        </form>
+    </x-auth-card>
+</x-guest-layout>

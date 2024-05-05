@@ -11,49 +11,66 @@
     <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
     <script src="https://unpkg.com/vanilla-tags-input"></script>
     <link rel="stylesheet" href="https://unpkg.com/@yaireo/tagify/dist/tagify.css">
-     <script src="https://unpkg.com/@yaireo/tagify"></script>
+    <script src="https://unpkg.com/@yaireo/tagify"></script>
      
 </head>
+<style>
+.email-preview {
+    position: relative;
+}
+
+.logout-btn {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.email-preview:hover .logout-btn {
+    display: block;
+}
+
+</style>
 <body>
 
-    <header>
-        <div class="menu">
-            <div class="img"><img src="/Image/logo.png" alt=""></div>
-            <div class="left">
-           <div class="tab">
-         
-           <button type="button"class="tablinks"> <a href="/cv/listcv">  Danh Sách ứng viên</button></a>
-           <button class="tablinks" > <a href="/js_job/list">Danh Sách vị trí </button></a>
-        </div>
-        <div id="Đăng" class="">
-        
-        </div>
-        <div id="Đăng" class=""></div>
+<header>
+    <div class="menu">
+        <div class="img"><img src="/Image/logo.png" alt=""></div>
+        <div class="left">
+            <div class="tab">
+                <button type="button" class="tablinks"> <a href="/cv/listcv">Danh Sách ứng viên</a></button>
+                <button class="tablinks"> <a href="/js_job/list">Danh Sách vị trí</a></button>
+            </div>
         </div>
         
         <div class="right">
-            
-      <input type="submit" value="30 Credist" class="btn2" style="width: 30%;background: white; height: 30px; font-size: 17px; color: black;">
-            <input type="submit" value="VN" class="btn2" style="width: 15%;
-            height: 30px;
-            background: no-repeat;
-            border: none;
-            color: white;
-            font-weight: 900;">
-        <div class="step">@php
-        use Illuminate\Support\Facades\Auth;
-        @endphp
-        @auth
-            <small class="">
-             <h4>{{ Auth::user()->email }}</h4>  
-            </small>
-       
-            @csrf
-            @else
-            
-            @endauth
+            <input type="submit" value="30 Credits" class="btn2" style="width: 30%;background: white; height: 30px; font-size: 17px; color: black;">
+            <input type="submit" value="VN" class="btn2" style="width: 15%;height: 30px;background: no-repeat;border: none;color: white;font-weight: 900;">
+            <div class="step">
+              @if (Auth::check())
+<div class="step">
+    <div class="email-preview" onmouseover="showLogout()" onmouseout="hideLogout()">
+        <small class="email">{{ explode('@', Auth::user()->email)[0] }}</small>
+        <div class="logout-btn" id="logout-btn">
+            <form method="POST" action="{{ route('logout') }}" id="logout-form">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
         </div>
+    </div>
+</div>
+@else
+    <p>User is not authenticated.</p>
+@endif
+
+                
+            </div>
         </div>
+    </div>
 </header>
 <br>
 <article>
@@ -69,7 +86,7 @@
             </div>
             </div>
         </section>
-    <form method="POST" action="{{ route('job.add') }}">
+        <form method="POST" action="{{ route('job.add.post') }}">
         @csrf
 <section>
 <div id="Đăng nhập" class="tabcontent">
@@ -111,6 +128,6 @@
 <script>
     var skillInput1 = document.querySelector('#skillInput1');
     var tagify = new Tagify(skillInput1);
- 
-    
 </script>
+</body>
+</html>

@@ -11,7 +11,7 @@ use Modules\Auth\Http\Controllers\PasswordResetLinkController;
 use Modules\Auth\Http\Controllers\RegisteredUserController;
 use Modules\Auth\Http\Controllers\VerifyEmailController;
 
-Route::middleware('guest')->group(function () {
+Route::prefix('/')->group(function() {
     Route::get('register', [RegisteredUserController::class, 'create'])
         ->name('register');
 
@@ -33,15 +33,13 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
         ->name('password.store');
-});
 
-Route::middleware('auth')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, 'showVerifyTokenForm'])
-        ->name('verify.token');
+        ->name('verify-token');
 
     Route::get('verify-email/{id}/{hash}',[ VerifyEmailController::class, 'verifyToken'])
         ->middleware(['signed', 'throttle:6,1'])
-        ->name('verify.token');
+        ->name('verify-token');
 
     Route::post('email/verification-notification', [EmailVerificationNotificationController::class, 'store'])
         ->middleware('throttle:6,1')
@@ -52,12 +50,11 @@ Route::middleware('auth')->group(function () {
 
     Route::post('confirm-password', [ConfirmablePasswordController::class, 'store']);
 
-    Route::put('password', [PasswordController::class, 'update'])->name('password.update');
+    Route::post('/password/update', [PasswordController::class, 'update'])->name('password.update');
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
         ->name('logout');
 
-
-        Route::get('/verify-token', 'AuthController@showVerifyTokenForm')->name('verify.token');
-    Route::post('/verify-token',  'AuthController@verifyToken')->name('verify.token');
+    Route::get('/verify-token', 'RegisteredUserController@showVerifyTokenForm')->name('verify.token');
+    Route::post('/verify-token',  'RegisteredUserController@verifyToken')->name('verify.token');
 });

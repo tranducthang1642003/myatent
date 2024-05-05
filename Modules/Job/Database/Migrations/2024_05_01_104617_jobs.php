@@ -36,8 +36,11 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('jobs');
+        Schema::enableForeignKeyConstraints();
     }
+    
 };

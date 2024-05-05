@@ -9,22 +9,22 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
-        Schema::create('verifytokens', function (Blueprint $table) {
-            $table->id();
-            $table->string('email')->nullable();
-            $table->string('token');
-            $table->boolean('is_activated')->default(0);
-            $table->timestamps();
-        });
+        if (!Schema::hasTable('verifytokens')) {
+            Schema::create('verifytokens', function (Blueprint $table) {
+                $table->id();
+                $table->string('email')->nullable();
+                $table->string('token')->unique();
+                $table->tinyInteger('is_activated')->default(0);
+                $table->timestamps();
+            });
+        }
     }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    
+    public function down()
     {
-        Schema::dropIfExists('verifytokems');
+        Schema::dropIfExists('verifytokens');
     }
+    
 };

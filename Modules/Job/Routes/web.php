@@ -12,14 +12,17 @@
 */
 
 Route::prefix('job')->group(function() {
-    Route::get('/', 'JobController@index')->name('job.add');
-    Route::post('/add', 'JobController@addJob')->name('job.add');
-    Route::get('/show', 'JobController@showJob')->name('job.add');
+    Route::get('/', 'JobController@index')->name('job.index');
+    Route::post('/job/add', 'JobController@addJob')->name('job.add.post');
+    Route::get('/show', 'JobController@showJob')->name('job.show');
     Route::delete('/job/{id}', 'JobController@destroyJob')->name('job.destroy');
     Route::get('/job/{id}/edit', 'JobController@edit')->name('job.edit');
     Route::put('/job/{id}', 'JobController@jobUpdate')->name('job.update');
-    Route::get('/filter', 'FilterController@showFilterForm')->name('showFilterForm');
-    Route::post('/filter', 'FilterController@filterCv')->name('job.filter'); 
-    Route::get('/search', 'FilterController@search')->name('job.search'); 
-});
+  
+    Route::get('/job/search', 'JobController@search')->name('job.search');
+    Route::get('/job/{id}/filter', 'JobController@showFilterForm')->name('job.filter');
+    Route::post('/job/filter', 'JobController@filter')->name('job.filter.post');
+    
+    
 
+});

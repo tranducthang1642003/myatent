@@ -1,39 +1,43 @@
-<x-base::layouts.guest>
-    <form method="POST" action="{{ route('password.store') }}">
-        @csrf
+<!-- resources/views/password_update.blade.php -->
 
-        <!-- Password Reset Token -->
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Update</title>
+</head>
+<body>
+    <div>
+        <h2>Password Update</h2>
+        
+        @if(session('error'))
+            <div>{{ session('error') }}</div>
+        @endif
 
-        <!-- Email Address -->
-        <div>
-            <x-base::input-label for="email" :value="__('Email')" />
-            <x-base::text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
-            <x-base::input-error :messages="$errors->get('email')" class="mt-2" />
-        </div>
+        @if(session('status'))
+            <div>{{ session('status') }}</div>
+        @endif
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-base::input-label for="password" :value="__('Password')" />
-            <x-base::text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            <x-base::input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-base::input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-base::text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required autocomplete="new-password" />
-
-            <x-base::input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-base::primary-button>
-                {{ __('Reset Password') }}
-            </x-base::primary-button>
-        </div>
-    </form>
-</x-base::layouts.guest>>
+        <form method="POST" action="{{ route('password.update') }}">
+            @csrf
+        
+            <!-- New Password -->
+            <div>
+                <label for="password">New Password</label>
+                <input id="password" type="password" name="password" required>
+            </div>
+        
+            <!-- Confirm New Password -->
+            <div>
+                <label for="password_confirmation">Confirm New Password</label>
+                <input id="password_confirmation" type="password" name="password_confirmation" required>
+            </div>
+        
+            <div>
+                <button type="submit">Update Password</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

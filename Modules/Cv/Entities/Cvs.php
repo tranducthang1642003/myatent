@@ -52,4 +52,11 @@ class Cvs extends Model
     {
         return $this->belongsToMany(Keyword::class, 'cv_keywords');
     }
+
+    public function hasKeyword($keyword)
+    {
+        // Kiểm tra từ khóa có tồn tại trong skills hoặc education của CV không
+        return stripos($this->skills, $keyword) !== false || 
+               stripos($this->education, $keyword) !== false;
+    }
 }

@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="/css/main.css">
+
 </head>
 <body>
     <div class="Headline">
@@ -18,16 +18,10 @@
 </div>
 <div class="da"></div>
 <!-- form sigin -->
-<<<<<<< HEAD:Modules/Auth/Resources/views/layouts/master.blade.php
 <div id="Đăng nhập" class="tabcontent">
     
 <form method="POST" action="{{ route('login') }}">
                           @csrf  
-=======
-<div id="Đăng nhập" class="tabcontent" >
-    <form method="POST" action="{{ route('login') }}"  >
-        @csrf
->>>>>>> 9974ce73e96bdc02e4a8dc105d1a75f0291e75fe:Modules/Auth/Resources/views/register.blade.php
     <div class="from-col-email">
     <label>Email</label>
     <div class="email">
@@ -42,11 +36,8 @@
     </div>
     <br>
     <div class="tap-input-1">
-    <div class="name-sig"><a href="{{ route('password.request') }}">Quên mật khẩu</a></div>
-    <div class="name-check">
-            <input id="remember_me" type="checkbox" name="remember">
-            <span class="ml-2 text-sm text-gray-600">{{ __('Ghi nhớ ') }}</span>
-    </div>
+    <div class="name-sig"><a href="/login/forgetpass">Quên mật khẩu</a></div>
+<div class="name-check"><input type="checkbox"> Ghi nhớ </div>
 
 </div>
     <div class="from-col-submit">
@@ -55,57 +46,48 @@
     </form>
 </div>
  <!-- from sigin -->
+
 <div id="Đăng ký" class="tabcontent">
-    <form method="POST" action="{{ route('register') }}">
+<form id="form" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
         @csrf
+ 
         <label>Chọn mô hình </label>
         <div class="tap-input-1">
             <div class="name-check"> <input type="radio" name="role" value="doang-nghiep"> Doang Nghiệp</div>
             <div class="name-sig"> <input type="radio" name="role" value="ca-nhan"> Cá Nhân</div>
-        </div> 
-        <!-- Email Address -->
-        <div class="mt-4">
-            <x-label for="email" :value="__('Email')" />
-
-            <x-input id="email" class="txt" type="email" name="email" :value="old('email')" required />
+        </div>    
+        <div class="from-col-email">
+            <label>Email</label>
+            <div class="email">
+                <input type="text" class="txt" name="email" placeholder="Nhập Email">
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-label for="password" :value="__('Password')" />
-
-            <x-input id="password" class="txt"
-                            type="password"
-                            name="password"
-                            required autocomplete="new-password" />
+        <div class="from-col-password">
+            <label>Password</label>
+            <div class="email">
+                <input type="password" class="txt" name="password" placeholder="Nhập Mật khẩu">
+            </div>
         </div>
-
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-input id="password_confirmation" class="txt"
-                            type="password"
-                            name="password_confirmation" required />
+        
+        <div class="from-col-password">
+            <label>Xác nhận mật khẩu</label>
+            <div class="email">
+                <input type="password" class="txt" name="password_confirmation" placeholder="Xác nhận Mật khẩu">
+            </div>
         </div>
-        <div class="">
-         
-            <div class="from-col-submit">
-                <input type="submit" class="btn" value="Register"> 
-                
-                </div>
-            {{-- <x-button class="btn">
-                {{ __('Register') }}
-            </x-button> --}}
-          
+        
+       
+    </div>
+    
+        <div class="from-col-submit">
+            <input type="submit" class="btn1" value="Submit">
         </div>
-        {{-- <a class="" href="{{ route('login') }}">
-            {{ __('Already registered?') }}
-        </a> --}}
-
-      
-    </form>
+ 
+</div>
 </form>
+
+
+
 </div>
 </body>
 </html> 

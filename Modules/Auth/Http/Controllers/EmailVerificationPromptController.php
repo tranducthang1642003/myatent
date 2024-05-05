@@ -2,17 +2,22 @@
 
 namespace Modules\Auth\Http\Controllers;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\View\View;
+use Illuminate\Routing\Controller;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 class EmailVerificationPromptController extends Controller
 {
-    public function __invoke(Request $request): RedirectResponse
+    /**
+     * Display the email verification prompt.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\View\View
+     */
+    public function __invoke(Request $request)
     {
         return $request->user()->hasVerifiedEmail()
-                    ? redirect()->intended(route('dashboard'))
-                    : view('auth::verify-email');
+                    ? redirect()->route('dashboard')
+                    : view('auth::verify_token');
     }
 }

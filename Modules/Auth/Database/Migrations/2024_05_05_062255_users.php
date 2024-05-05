@@ -13,18 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cv_keywords', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('cvs_id');
-            $table->unsignedBigInteger('keyword_id');
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->boolean('is_activated')->default(false); 
+            $table->rememberToken();
             $table->timestamps();
-
-            // Define foreign key constraints
-            $table->foreign('cvs_id')->references('id')->on('cvs')->onDelete('cascade');
-            $table->foreign('keyword_id')->references('id')->on('keywords')->onDelete('cascade');
         });
     }
-    
 
     /**
      * Reverse the migrations.
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cvs_keywords');
+        Schema::dropIfExists('users');
     }
 };
